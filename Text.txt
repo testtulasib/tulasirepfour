@@ -1,0 +1,513 @@
+
+Dev EBO
+http://pit1ipmebo01t.nccgroup.local/Pages/Security/Login.aspx?ReturnUrl=%2fdefault.aspx
+jegerton/Password2
+
+QA eWork
+http://PIT1IPMEWORK02Q.nccgroup.local/metastorm
+
+EBO Boyers (Prod)
+https://ebo.nccgroup.com/Pages/Security/Login.aspx?
+
+Jaguar:
+http://jaguar.nccgroup.local/jaguar/
+
+ICANN IDAS:
+https://idas.nccgroup.com/Pages/Security/Login.aspx
+
+EMC
+https://escrowconnect.nccgroup.com/login
+
+eWork
+http://pit1ipmework02p.nccgroup.local/metastorm/default.aspx  - Boyers  1st instance
+http://pit1ipmework04p.nccgroup.local/metastorm/default.aspx  - Boyers 2nd instance
+*************************************************
+
+Boyers 2nd Instance
+http://pit1ipmework02p.nccgroup.local/metastorm/default.aspx#
+
+
+
+
+DR Instance
+
+
+
+http://sfo1ipmework02p.nccgroup.local/metastorm/default.aspx#
+http://sfo1ipmework04p.nccgroup.local/metastorm/default.aspx#
+
+
+
+Dev Instance
+
+
+
+http://pit1ipmework02t.nccgroup.local/metastorm/default.aspx#
+**********************************
+
+
+jegerton/Jaguar01$ipm!
+
+ipmrydecustomerservice@nccgroup.com
+preprod
+http://10.48.92.68/metastorm/default.aspx
+215350
+
+1146 Build Escrow Management Center instance on NCC PreProd servers
+Build Escrow Management Center instance on NCC QA servers
+Clone the EMC application from the Prod instance on Boyers server to QA server. Update the required configurations. (This would include the IMC replacement)
+
+yes that we need to click on desktop right click -> new-> shortcut ->
+paste this "C:\Program Files (x86)\Java\jre1.8.0_311\bin\javacpl.exe" click next and finish
+
+EMC Dr
+
+testdradmin
+Password@1
+
+
+40181-0518045 - dep - 11 -sut
+26791-0518045
+
+jegerton -- DR
+Yx72r2BxFCZe9uOUJ8u9Ww==
+
+Password1
+UGgDU3juY81cDZ/Ay0JFQg== - preprod
+
+Company Name TestDrCo  
+Company Number 76026 
+
+Product Name TestDRProd  
+Deposit Account Number 55290  
+
+Sales Order Number 54434  
+Representative Egerton, Joy 
+
+55290-76026 
+
+
+Emails are not getting delivered to recipients outside of NCC from PreProd eWork server
+Hi Team,
+
+Emails are not getting delivered to recipients outside NCC. We are getting error while sending emails to external ids from PreProd eWork app server
+ 
+Server ip:  10.48.92.98 (PreProd eWork app server)
+
+Regards,
+Tulasi
+
+Deposit262866 - Dev
+Deposit262866 - QA
+
+Term74062 - QA
+
+EMC QA
+[13-09 19:18] Umavanamali Pendyam
+10.48.94.66
+
+[13-09 19:18] Umavanamali Pendyam
+https://10.48.94.66:7000
+
+[13-09 19:19] Umavanamali Pendyam
+test0001@nccgroup.com/Password@123
+
+EMC QA
+[13-09 19:18] Umavanamali Pendyam
+https://10.48.94.66:7000/login
+
+[13-09 19:19] Umavanamali Pendyam
+test0001@nccgroup.com/Password@123
+
+
+--------------------------------------------------------
+' miscellaneous utility common routines for ework scripts
+' $Header: /EworkDev/ework/Code/ServerVBScript/CommonUtility.vbs 18    4/19/06 3:07p Lskarpness $ $NoKeywords: $
+
+Public Const gcstrDefaultOfficeFaxNumber = "858.694.1919"
+'Public Const gcstrIMConnectWebsite = "www.ironmountainconnect.com/"
+Public Const gcstrIMConnectWebsite ="https://escrowconnect.nccgroup.com/"
+
+'Public Const gcstrIPMEscrowWebsite = "www.ironmountain.com/information-management/software-escrow"
+'Public Const gcstrIPMVerServicesEmailId = "ipmverificationservices@ironmountain.com"
+'Public Const gcstrIPMClientServicesEmailId = "ipmclientservices@ironmountain.com"
+'Public Const gcstrDlDSIVerSalesEmailId = "dlDSIVerificationSales@ironmountain.com"
+'Public Const gcstrIPMVaultAdminEmailId = "ipmvaultadministration@ironmountain.com"
+'Public Const gcstrIPMRDEKeysEmailId = "rde-keys@ironmountain.com"
+'Public Const gcstrIPMEworkAdminEmailId = "EworkAdmin@ironmountain.com" 
+'Public Const gcstrIPMClientSupportEmailId = "clientsupport@ironmountain.com"
+'Public Const gcstrIPMTerm2EmailId = "ipmterm2@ironmountain.com"
+'Public Const gcstrDSICollectionsEmailId = "dsicollections@ironmountain.com"
+'Public Const gcstrIPMWorkRequestsEmailId = "ipmworkrequests@ironmountain.com"
+'Public Const gcintLetterGenThresholdVal=50
+'Public Const gcstrIPMAccountEmailId="ipmaccounting@ironmountain.com"
+
+Public Const gcstrIPMEscrowWebsite = "softwareresilience.nccgroup.com/software-escrow"
+Public Const gcstrIPMVerServicesEmailId = "ipmverificationservices@nccgroup.com" '"ipmverificationservices@ironmountain.com"
+Public Const gcstrIPMClientServicesEmailId = "ipmclientservices@nccgroup.com" '"ipmclientservices@ironmountain.com"
+Public Const gcstrDlDSIVerSalesEmailId = "no reply@nccgroup.com" '"dlDSIVerificationSales@ironmountain.com"
+Public Const gcstrIPMVaultAdminEmailId = "ipmvaultadministration@nccgroup.com" '"ipmvaultadministration@ironmountain.com"
+Public Const gcstrIPMRDEKeysEmailId = "ipmrrdecustomerservice@nccgroup.com" '"rde-keys@ironmountain.com"
+Public Const gcstrIPMEworkAdminEmailId = "no-reply@nccgroup.com" '"EworkAdmin@ironmountain.com"
+Public Const gcstrIPMClientSupportEmailId = "ipmclientsupport@nccgroup.com" '"clientsupport@ironmountain.com"
+Public Const gcstrIPMTerm2EmailId = "ipmterm2@nccgroup.com" '"ipmterm2@ironmountain.com"
+Public Const gcstrDSICollectionsEmailId = "no-reply@nccgroup.com"  '"dsicollections@ironmountain.com"
+Public Const gcstrIPMWorkRequestsEmailId =  "no-reply@nccgroup.com" '"ipmworkrequests@ironmountain.com"
+Public Const gcintLetterGenThresholdVal=50
+Public Const gcstrIPMAccountEmailId= "ipmaccounting@nccgroup.com" '"ipmaccounting@ironmountain.com"
+
+Function UtilSQ(ByRef s)
+' put single quotes around string
+    UtilSQ = Chr(39) & s & Chr(39)
+End Function
+
+Function UtilSQC(ByRef s)
+' put single quotes around string and a comma at the end
+    UtilSQC = Chr(39) & s & Chr(39) &  ", "
+End Function
+
+Function UtilDQ(ByRef s)
+				
+' put double quotes around string
+    UtilDQ = Chr(34) & s & Chr(34)
+
+End Function
+
+Function UtilDQC(ByRef s)
+' put double quotes around string and a comma at the end
+    UtilDQC = Chr(34) & s & Chr(34) & ", "
+End Function
+
+Function UtilNulltoTxt(iValue)
+   if isNull(iValue) then
+      UtilNulltoTxt = "null"
+   else
+      UtilNulltoTxt = iValue
+   end if
+End Function
+
+Function UtilComputerName()
+	Dim WshNetwork
+	Set WshNetwork = CreateObject("WScript.Network")
+	UtilComputerName = WshNetwork.ComputerName
+	Set WshNetwork = Nothing
+End Function
+
+Function UtilWebServerName()
+				
+	'UtilWebServerName = "192.168.72.30"
+
+        Dim objFSO, objTextFile, strText	   
+
+        Set objFSO = CreateObject("Scripting.FileSystemObject")
+		
+        Set objTextFile = objFSO.OpenTextFile("C:\HostedApplications\ework\ServerScript\webserverip.ini")
+		
+        strText = objTextFile.Readline 
+		
+	objTextFile.Close
+	
+	UtilWebServerName = Trim(strText)
+
+End Function
+Function UtilIsProduction()
+	' Sprint 59
+	' Story 		-IPMEGH-7522  IsProductionServer() function for ework	
+	' Date 			- February, 12th 2015
+	' Author 		- Arjun Chiddarwar
+	' Description 	- Rest of the code is removed and the function is kept because function may be called in ework. And we always want it to be true.	
+	UtilIsProduction = True
+	
+End Function
+
+Function UtilTemplateFolderPath()
+	Const strRegMergeDocs = "HKEY_LOCAL_MACHINE\SOFTWARE\Metastorm\DSI\Mail Merge"
+	Dim oReg
+	Set oReg = CreateObject("Wscript.shell")
+	UtilTemplateFolderPath = oReg.RegRead(strRegMergeDocs)
+	Set oReg = Nothing
+End Function
+
+Function UtilTestEmailAddresses()
+	'UtilTestEmailAddresses = "DSITest@ironmountain.com"
+	'UtilTestEmailAddresses = "kellie.trainor@ironmountain.com"
+         'UtilTestEmailAddresses = "sharayu.anap@ironmountain.com" '"tommy.redd@ironmountain.com"
+		 UtilTestEmailAddresses = "no-reply@nccgroup.com" '"tommy.redd@ironmountain.com"
+End Function
+
+Function UtilSeeFolderHTMLLink()
+	
+	UtilSeeFolderHTMLLink = "See eWork folder <A HREF=" & UtilDQ("http://" & UtilWebServerName() & "/metastorm/eFolder.aspx?FolderID=" & ework.FolderID) & ">ework folder <B>" & ework.FolderName & "</B></A> for more details."
+	
+End Function
+
+Function UtilOneLineAddress(rs)
+	Dim s, v
+	s = rs("Address_Line_1").Value
+	If rs("Address_Line_2").Value & "" <> "" Then
+		s = s & ", " & rs("Address_Line_2").Value
+	End If
+	If rs("Address_Line_3").Value & "" <> "" Then
+		s = s & ", " & rs("Address_Line_3").Value
+	End If
+	If rs("City").Value & "" <> "" Then
+		s = s & ", " & rs("City").Value
+	End If
+	If rs("State_Code").Value & "" <> "" Then
+		s = s & ", " & rs("State_Code").Value
+	End If
+	If rs("Zip_Code").Value & "" <> "" Then
+		s = s & " " & rs("Zip_Code").Value
+	End If
+	If rs("Country_Name").Value & "" <> "" Then
+		s = s & ", " & rs("Country_Name").Value
+	End If
+	UtilOneLineAddress = s
+End Function
+
+Dim mobjCDOConf ' for UtilSendEmail, lasts lifetime of script
+
+Sub UtilSendEmail(ToAddress, CCAddress, SubjectText, BodyText, AttachFilePath, FromAddress)
+		ToAddress="jayashree.chitthirarajan@nccgroup.com"    
+		'FromAddress="jayashree.chitthirarajan@nccgroup.com"
+		CCAddress="tulasi.bai@nccgroup.com"
+' Use CDO.  ework.EMail sends asyncronously after attachment file is already deleted
+' and it does not allow multiple attachements
+	Const cdoSendUsingMethod =	"http://schemas.microsoft.com/cdo/configuration/sendusing"
+	Const cdoSMTPServer =		"http://schemas.microsoft.com/cdo/configuration/smtpserver"
+	Const cdoSMTPServerPort =	"http://schemas.microsoft.com/cdo/configuration/smtpserverport"
+	Const cdoSendUsingPort = 2
+	Dim iMsg, Flds
+	Set iMsg = CreateObject("CDO.Message")
+	
+	If IsEmpty(mobjCDOConf) Then
+		Set mobjCDOConf = CreateObject("CDO.Configuration")
+		Set Flds = mobjCDOConf.Fields
+		Flds(cdoSendUsingMethod).Value = cdoSendUsingPort
+		'Flds(cdoSMTPServer).Value = "xmail.ironmountain.com" '"172.17.44.169" '
+		Flds(cdoSMTPServer).Value = "smtp.nccgroup.local" '"xmail.ironmountain.com" '"172.17.44.169" '
+		'Flds(cdoSMTPServer).Value = "172.17.44.169" '"172.17.44.169" '
+		Flds(cdoSMTPServerPort).Value = 25
+		Flds.Update
+	End If
+	With iMsg
+		Set .Configuration = mobjCDOConf
+		.From = FromAddress
+		.MimeFormatted = False
+		.AutoGenerateTextBody = False
+		'(IPMEGH-7522)
+		.To = ToAddress
+		.Subject = SubjectText
+		.CC = CCAddress
+		
+		If UCase(Left(BodyText,6)) = "<HTML>" Then
+			.AutoGenerateTextBody = True ' will make text part in case user is without HTML
+			.HTMLBody = BodyText
+			'Defect Fix for IPME-1973: unwanted ! mark seen in the email text.
+			.HTMLBodyPart.ContentTransferEncoding = "quoted-printable"
+		Else
+			.TextBody = BodyText
+		End If
+		dim AttachFileArray
+		If RTrim(AttachFilePath & "") <> "" Then
+			'Author		 : Suhas Dhongade
+			'Date		 : 5 Dec 2012
+			'Sprint#32 Story#7 IPME-1875 Verification Workflow - Issues seen in Final Report Notices 
+			'Extracted attachement file path using split and ';' delimiter
+			AttachFileArray = Split(AttachFilePath,";")
+			for each filePath in AttachFileArray
+				if filePath <> "" Then 
+					.MimeFormatted = True
+					.AddAttachment filePath
+				End if
+			Next
+		End If
+		.Send
+        'Set oStream = .GetStream()
+        'oStream.SaveToFile "c:\temp\test.eml"
+	' messages are not sent until the script exits and
+	' the mobjCDOConf is automatically set to nothing as it goes out of scope
+	End With
+	Set iMsg = Nothing
+End Sub
+
+Function UtilMakeEmailText(ToAddress, CCAddress, SubjectText, BodyText, AttachFilePath, FromAddress)
+
+        ToAddress="jayashree.chitthirarajan@nccgroup.com"    
+		'FromAddress="jayashree.chitthirarajan@nccgroup.com"
+	CCAddress="tulasi.bai@nccgroup.com"
+		
+	s = "<html>Sent: " & FormatDateTime(Now()) & "<br>" _
+		& "From: " & FromAddress & "<br>" _
+		& "To: " & ToAddress & "<br>" _
+		& "CC: " & CCAddress & "<br>" _
+		& "Subject: " & SubjectText & "<br>"
+		
+		
+		
+	If AttachFilePath & "" <> "" Then
+		'Author		 : Suhas Dhongade
+		'Date		 : 5 Dec 2012
+		'Sprint#32 Story#7 IPME-1875 Verification Workflow - Issues seen in Final Report Notices 
+		'Extracted attachement file path using split and ';' delimiter
+		dim AttachPathArray
+		AttachPathArray =Split(AttachFilePath,";")
+		for each filePath in AttachPathArray
+			Dim fso, f, s
+			Set fso = CreateObject("Scripting.FileSystemObject")
+			Set f = fso.GetFile(filePath)
+			s = s & "Attachment: " & filePath & " Last Modified: " & f.DateLastModified &  "<br>"
+		Next
+	End If
+	s = s & "<br>" & BodyText & "<br><br><hr><br></html>"
+	UtilMakeEmailText = s
+End Function
+
+Function UtilHttpLink(Location)
+	UtilHttpLink = "<a href=" & UtilDQ("https://" & Location) & ">https://" & Location & "</a>"
+End Function
+
+Function UtilHttpLink1(Location)
+	'UtilHttpLink1 = "<a href=" & UtilDQ("http://" & Location) & ">" & Location & "</a>"
+	UtilHttpLink1 = "<a href=" & UtilDQ("" & Location) & ">" & Location & "</a>"
+End Function
+
+Function UtilSetDefaultProcessingOffice()
+	'Set default ProcessingOffice to "Atlanta Processing Office"
+	UtilSetDefaultProcessingOffice = ework.SelectSQL("SELECT Contact_ID FROM Contact WHERE Last_Name = 'Atlanta Processing Office'")
+End Function
+------------------------------------------------------------------
+
+[23-09 16:15] Janet Purushothaman
+https://ebo.nccgroup.com/Pages/Security/Login.aspx?ReturnUrl=%2f-EBO -Boyers
+http://jaguar.nccgroup.local/jaguar/ -Jag-Boyers
+http://jaguar-dr.nccgroup.local/jaguar/  Jag-DR
+http://ebo_dr.nccgroup.com/Pages/Security/Login.aspx?ReturnUrl=%2f  -EBO_ DR
+
+http://pit1ipmebo01t.nccgroup.local/Pages/Security/Login.aspx?ReturnUrl=%2fdefault.aspx    EBO-Dev
+http://10.48.93.70/jaguar/    Jag-Dev
+http://pit1ipmebo01q.nccgroup.local/Pages/Security/Login.aspx?ReturnUrl=%2fdefault.aspx    EBO-QA
+http://pit1ipmjagwb01q.nccgroup.local/jaguar/default.asp?LoggedOut=true    Jag-QA
+http://pit1ipmebo01u.nccgroup.local/Pages/Security/Login.aspx?ReturnUrl=%2f    EBO-PreProd
+http://pit1ipmjagwb01u.nccgroup.local/jaguar/default.asp?LoggedOut=true    Jag-PreProd
+
+
+-----------------------------------------------
+
+[29-08 22:36] Tulasi Bai
+URL: http://sfo1ipmicann01p.nccgroup.local/Pages/Security/Login.aspx?
+
+[29-08 22:36] Tulasi Bai
+username/password - hkatteri/Password2
+
+------
+
+[23-09 16:16] Tulasi Bai
+jegerton/Password2
+For QA and PreProd -PW is Password1
+ - story 11705
+
+Deposit issue, verification - no deposit ( ? issue)
+im connect - materials recd - Dep proc
+software/ncc ... NAS (welco kit), Dep prc (send jnt ins), termination - dispute letter
+
+
+We had created V2 of every ICANN SSIS job in Boyers.
+
+This is regarding Developers not being able to connect to NCC DB for debugging from infinite laptop even after connecting to CisCo VPN. Biju asked me to check with you on this issue.
+Currently Sanjiv/Ravindranath are working by taking the snapshot of the NCC DB on to their local. Dilip was working on IRM environment.
+
+
+http://localhost:8080/qcbin/
+
+http://localhost:8080/qcbin/start_a.jsp
+
+
+
+pit1ipmework02t.nccgroup.local/metastorm/default.aspx
+
+IRM_UFTAutomationFW
+
+112
+\\pit1isidata01p.isi.nccgroup.local\ipm-datashare
+
+http://pit1ipmmfalm01q:8080/qcbin/start_a.jsp
+ALM : 
+tbai/Password123
+
+Teststepid = 38 , add param4 (index) as 0 in 2xsmoketest_v7
+
+Microsoft Office 2003 Web Components
+C:\results
+
+ICANN AUdit file processing - 2287 and 816 
+
+Incident# 221632
+
+Dan mentioned that he need to rebuild the server (122) and I may lose the changes made to script. 
+He then messaged that he fixed the issue.
+I'm able to login to the server. But the changes made to the pulling Exhibit B script is lost. I'm making 
+the changes to pulling exhibit B script all over again.
+
+plan:
+1. To complete rework on Pulling exhibit B script
+2. Update EMC smkoke test script 
+--------------
+[8:47 PM] Dilip Kumar Tripathy
+sa_ipm_rrde_prd        :    qXk3U7bx3JIFV7zB7vg*
+sa_ipm_rrde_dev        :    2FKuaX2aJByx3k!DjJzA
+sa_ipm_rrde_qa        :    HXzmUuBDrcQi2hmmGH!F
+sa_ipm_rrde_uat        :    nF82V0bhcU0oaa!57kmD
+
+sa_ipm_ryde_prd        :    y4betbon=bocyue1
+sa_ipm_ryde_dev        :    7L!5sGCjRIf16rtNPBZW
+sa_ipm_ryde_qa        :    STQzPYGF3Y!DHxzAwUEa
+sa_ipm_ryde_uat        :    TXyddz7hwaoC!bgw4Kw0
+
+
+------------------------------
+
+101734456585 - UAN
+101734456585
+101734456585
+
+
+921010033337509
+
+10.48.94.121
+5814
+
+00517120-00477440-9360
+
+
+BWA0WS138
+
+ICS-LAP-5274.infics.com
+ICS-LAP-5274.infics.com
+
+
+06/02/2019
+06/09/2022
+
+
+
+
+
+------------------------------
+
+44.16666667
+54.18181818
+37.6344086
+36.71497585
+37.44680851
+----------------------------------------------
+
+Github - Github.com
+January2023$
+testtulasib
+access token - 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 
+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 
+
+
+
+
